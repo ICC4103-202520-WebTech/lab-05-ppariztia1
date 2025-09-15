@@ -1,9 +1,9 @@
 class ReservationsController < ApplicationController
   def index
-    @rooms = Room.all
+    @reservations = Reservation.all
   end
 
   def show
-    @room = Room.find(params[:id])
+    @reservation = Reservation.find(params[:id])
   end
 end

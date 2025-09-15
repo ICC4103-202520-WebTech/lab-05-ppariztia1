@@ -1,2 +1,7 @@
-<h1>Services#show</h1>
-<p>Find me in app/views/services/show.html.erb</p>
+<h1><%= @service.name %></h1>
+
+<p>Price: <%= @service.price %></p>
+<p>Active: <%= @service.is_active %></p>
+<p>Created at: <%= @service.created_at %></p>
+
+<%= link_to "Back to Services", services_path %>

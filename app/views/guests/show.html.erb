@@ -1,2 +1,9 @@
-<h1>Guests#show</h1>
-<p>Find me in app/views/guests/show.html.erb</p>
+<h1>Guest: <%= @guest.full_name %></h1>
+
+<p>Email: <%= @guest.email %></p>
+<p>Phone: <%= @guest.phone %></p>
+<p>Document ID: <%= @guest.document_id %></p>
+<p>Created at: <%= @guest.created_at %></p>
+
+<%= link_to "Back to Guests", guests_path %>
+

@@ -1,2 +1,11 @@
-<h1>Reservations#index</h1>
-<p>Find me in app/views/reservations/index.html.erb</p>
+<h1>Reservations</h1>
+
+<ul>
+    <% @reservations.each do |reservation|%>
+        <li>
+            <%= link_to "#{reservation.reservation_status}", reservation_path(reservation.id) %>
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "Back to Home", home_path %>
