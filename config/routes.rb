@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get "services/index"
+  get "services/show"
+  get "services/new"
+  get "services/edit"
+  get "reservations/index"
+  get "reservations/show"
+  get "reservations/new"
+  get "reservations/edit"
+  get "guests/index"
+  get "guests/show"
+  get "guests/new"
+  get "guests/edit"
+  get "rooms/index"
+  get "rooms/show"
+  get "rooms/new"
+  get "rooms/edit"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -11,4 +27,16 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get "/rooms", to: "rooms#index" as: "rooms"
+  get "/rooms/:id", to: "rooms#show" as: "room"
+
+  get "/guests", to: "guests#index" as: "guests"
+  get "/guests/:id", to: "guests#show" as: "guest"
+
+  get "/reservations", to: "reservations#index" as: "reservations"
+  get "/reservations/:id", to: "reservations#show" as: "reservation"
+
+  get "/services" to: "services#index" as: "services"
+  get "/services/:id" to: "services#show" as: "service"
+
 end
