@@ -1,8 +1,9 @@
-<h1>Welcome to Peter's Place</h1>
-
-<ul>
-  <li><%= link_to "Rooms", rooms_path %></li>
-  <li><%= link_to "Guests", guests_path %></li>
-  <li><%= link_to "Reservations", reservations_path %></li>
-  <li><%= link_to "Services", services_path %></li>
-</ul>
+<div class="container">
+  <h1>Welcome to Peters Place</h1>
+  <div class="list-buttons">
+    <%= link_to "Rooms", rooms_path, class: "btn btn-primary mb-3" %>
+    <%= link_to "Guests", guests_path, class: "btn btn-primary mb-3" %>
+    <%= link_to "Reservations", reservations_path, class: "btn btn-primary mb-3" %>
+    <%= link_to "Services", services_path, class: "btn btn-primary mb-3" %>
+  <div>
+</div>
